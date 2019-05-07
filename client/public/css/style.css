@@ -1,0 +1,117 @@
+#root {
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: sans-serif;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    background: #005db6;
+}
+
+.header_nav-menu ul {
+    display: flex;
+}
+
+#header a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#header a:hover{
+    background: #004a92;
+}
+
+#login-form, #reg-form {
+    margin: 0 auto;
+    max-width: 500px;
+    margin-top: 180px;
+}
+
+.login-form_header, .reg-form_header {
+    text-align: center;
+    width: 100%;
+    background-color: #005db6;
+    padding: 20px 0;
+}
+
+.login-form_header h2, .reg-form_header h2 {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.login-form_inputs, .reg-form_inputs {
+    border: 1px solid #005db6;
+    padding: 30px;
+    text-align: center;
+}
+
+.login-from_inputs form, .reg-from_inputs form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.login-form_inputs input, .reg-form_inputs input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #888888;
+    font-size: 16px;
+    color: #888888;
+    width: 100%;
+    margin-top: 40px;
+    outline: none;
+    padding-bottom: 4px;
+}
+
+.login-form_inputs input.error, .reg-form_inputs input.error {
+    border-bottom: 1px solid #ff0000;
+}
+
+span.error {
+    display: block;
+    color: #ff0000;
+    text-align: left;
+    padding-top: 4px;
+    font-size: 14px;
+}
+
+.login-form_inputs input:first-child, .reg-form_inputs input:first-child {
+    margin-top: 0;
+}
+
+.login-form_inputs input:focus,.reg-form_inputs input:focus {
+    border-bottom: 1px solid #005db6;
+}
+
+.login-form_inputs .login-form_button, .reg-form_inputs .reg-form_button {
+    margin-bottom: 30px;
+    border: none;
+    background-color: #005db6;
+    color: #ffffff;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.login-form_inputs .login-form_button:hover, .reg-form_inputs .reg-form_button:hover {
+    background-color: #004a92;
+}
+
+.login-form_inputs a, .reg-form_inputs a {
+    text-decoration: none;
+    color: #005db6;
+}
+
+.login-form_inputs a:hover, .reg-form_inputs a:hover {
+    text-decoration: underline;
+}
+
+.login-form_errors, .reg-form_errors {
+    padding-top: 20px;
+    color: #ff0000;
+    text-align: center;
+}

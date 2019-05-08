@@ -12,6 +12,8 @@ const initialState = {
     isLogin: false,
     regDate: undefined,
     imageURL: undefined,
+    userID: undefined,
+    about: '',
     error: ''
 };
 
@@ -24,6 +26,8 @@ export function userReducer(state = initialState, action) {
                 isAdmin: action.payload.isAdmin,
                 regDate: action.payload.regDate,
                 imageURL: action.payload.imageURL,
+                userID: action.payload._id,
+                about: action.payload.about,
                 isLogin: true,
                 error: ''
             };
@@ -53,6 +57,8 @@ export function userReducer(state = initialState, action) {
                 isAdmin: action.payload.isAdmin,
                 regDate: action.payload.regDate,
                 imageURL: action.payload.imageURL,
+                userID: action.payload._id,
+                about: action.payload.about,
                 isLogin: true,
                 error: ''
             };

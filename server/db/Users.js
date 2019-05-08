@@ -8,6 +8,10 @@ const usersSchema = new mongoose.Schema({
     imageURL: String,
     email: String,
     password: String,
+    about: {
+        type: String,
+        default: 'Расскажите нам о себе. Нажмите кнопку \"Редактировать\" для обновления информации о профиле'
+    }
 });
 
 module.exports = mongoose.model('Users', usersSchema);

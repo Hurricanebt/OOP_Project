@@ -9,14 +9,12 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    console.log(req.body);
+    const { title, text } = req.body;
+
     News.create({
-        title: req.body.title,
-        text: req.body.text,
-        author: req.body.author})
-        .then(news => {
-           res.send(news);
-        });
+        title: title,
+        text: text})
+        .then(news => res.send(news));
 });
 
 module.exports = router;

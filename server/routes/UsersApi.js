@@ -20,7 +20,7 @@ router.post('/registration', async (req, res) => {
             lastName: lastName,
             isAdmin: isAdmin,
             email: email,
-            imageURL: imageURL,
+            imageURL: imageURL || 'https://www.animuspilates.hu/_files/velemenyek/profil_image.png',
             password: password})
             .then((user) => res.send(user));
 

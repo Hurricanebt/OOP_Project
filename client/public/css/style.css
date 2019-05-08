@@ -29,7 +29,7 @@
 #login-form, #reg-form {
     margin: 0 auto;
     max-width: 500px;
-    margin-top: 180px;
+    margin-top: 200px;
 }
 
 .login-form_header, .reg-form_header {
@@ -84,7 +84,7 @@ span.error {
     margin-top: 0;
 }
 
-.login-form_inputs input:focus,.reg-form_inputs input:focus {
+.login-form_inputs input:focus, .reg-form_inputs input:focus {
     border-bottom: 1px solid #005db6;
 }
 
@@ -114,4 +114,62 @@ span.error {
     padding-top: 20px;
     color: #ff0000;
     text-align: center;
+}
+
+#profile {
+    margin-top: 100px;
+}
+
+#profile h2 {
+    font-size: 40px;
+}
+
+.profile_main {
+    display: flex;
+    margin-top: 30px;
+}
+
+.profile_personal-info p {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.profile_personal-info p:first-child {
+    margin-top: 0;
+}
+
+.profile_about {
+    margin-top: 60px;
+}
+
+p.about_text {
+    font-size: 20px;
+}
+
+.profile_personal-info b {
+    font-weight: bold;
+}
+
+.profile_main img {
+    max-width: 300px;
+    height: auto;
+    margin-right: 40px;
+}
+
+.profile_header {
+    display: flex;
+}
+
+.profile_button {
+    margin-left: 40px;
+    border: none;
+    background-color: #005db6;
+    color: #ffffff;
+    padding: 15px 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.profile_button:hover {
+    background-color: #004a92;;
 }

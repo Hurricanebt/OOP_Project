@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     background: #005db6;
+    box-shadow: 0 0 10px rgb(204, 201, 201);
 }
 
 .header_nav-menu ul {
@@ -68,7 +69,7 @@
     padding-bottom: 4px;
 }
 
-.login-form_inputs input.error, .reg-form_inputs input.error {
+input.error {
     border-bottom: 1px solid #ff0000;
 }
 
@@ -118,6 +119,8 @@ span.error {
 
 #profile {
     margin-top: 100px;
+    box-shadow: 0 0 10px rgb(204, 201, 201);
+    padding: 25px;
 }
 
 #profile h2 {
@@ -129,9 +132,14 @@ span.error {
     margin-top: 30px;
 }
 
+.profile_personal-info {
+    width: 100%;
+}
+
 .profile_personal-info p {
     margin-top: 10px;
     font-size: 24px;
+    height: 28px;
 }
 
 .profile_personal-info p:first-child {
@@ -150,10 +158,14 @@ p.about_text {
     font-weight: bold;
 }
 
+.profile_left-bar {
+    margin-right: 40px;
+    max-width: 300px;
+}
+
 .profile_main img {
     max-width: 300px;
     height: auto;
-    margin-right: 40px;
 }
 
 .profile_header {
@@ -161,15 +173,70 @@ p.about_text {
 }
 
 .profile_button {
-    margin-left: 40px;
+    text-align: center;
     border: none;
     background-color: #005db6;
     color: #ffffff;
+    margin-top: 20px;
     padding: 15px 10px;
     cursor: pointer;
     user-select: none;
+    flex: 50%;
 }
 
 .profile_button:hover {
     background-color: #004a92;;
+}
+
+.profile_edit-buttons {
+    display: flex;
+}
+
+.cancel {
+    background-color: #cc0000;
+    flex: 50%;
+}
+
+.cancel:hover {
+    background-color: #b81414;
+}
+
+#profile input {
+    margin: 0;
+    margin-top: -2px;
+    padding: 0;
+    border: none;
+    font-size: 24px;
+    color: #888888;
+    border-bottom: 1px solid #888888;
+    outline: none;
+}
+
+#profile input:focus {
+    border-bottom: 1px solid #005db6;
+}
+
+#profile textarea {
+    resize: none;
+    margin-top: 7px;
+    width: 100%;
+    height: 160px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #888888;
+    border-bottom: 1px solid #888888;
+    outline: none;
+}
+
+#profile textarea:focus {
+    border: 1px solid #005db6;
+}
+
+.photo-link {
+    width: 100%;
+    margin: 5px 0px !important;
+}
+
+#profile input.error {
+    border-bottom: 1px solid #ff0000;
 }

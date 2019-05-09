@@ -5,6 +5,8 @@ export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILED = 'LOGIN_FAILED';
 export const REG_SUCCESS = 'REG_SUCCESS';
 export const REG_FAILED = 'REG_FAILED';
+export const EDIT_SUCCESS = 'EDIT_SUCCESS';
+export const EDIT_FAILED = 'EDIT_FAILED';
 export const LOGOUT = 'LOGOUT';
 export const REFRESH = 'REFRESH';
 
@@ -58,6 +60,35 @@ export function registration(lastName, firstName, email, password, imageURL) {
         .catch((error) => {
             dispatch({
                 type: REG_FAILED,
+                payload: error
+            })
+        })
+    }
+}
+
+export function editProfile(lastName, firstName, about, imageURL, userID) {
+    return dispatch => {
+        fetch(`http://localhost:4000/api/edit?userID=${userID}`, {
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            method: 'POST',
+            body: encodeBody({
+                "firstName": firstName,
+                "lastName": lastName,
+                "about": about,
+                "imageURL": imageURL
+            })
+        })
+        .then(data => data.json())
+        .then(data => {
+            if (data.isValidationError) throw data;
+            dispatch({
+                type: EDIT_SUCCESS,
+                payload: data
+            });
+        })
+        .catch((error) => {
+            dispatch({
+                type: EDIT_FAILED,
                 payload: error
             })
         })

@@ -2,6 +2,7 @@ const express = require('express');
 const Users = require('../db/Users');
 const loginValidation = require('../utils/loginValidation');
 const regValidation = require('../utils/regValidation');
+const editValidation = require('../utils/editValidation');
 
 const router = express.Router();
 
@@ -38,6 +39,36 @@ router.get('/login', async (req, res) => {
 
         const user = await Users.findOne({ email: email, password: password });
         if (!user) throw {isValidationError: true, userNotFound: 'Пользователь с такой почтой и паролем не найден'};
+
+        res.send(user);
+
+    } catch (error) {
+        res.send(error);
+    }
+});
+
+router.post('/edit', async (req, res) => {
+    try {
+        const { lastName, firstName, about, imageURL } = req.body;
+
+        console.log(imageURL.length);
+
+        const errors = editValidation(lastName, firstName, imageURL);
+        if (errors.isValidationError) throw errors;
+
+        const user = await Users.findOneAndUpdate(
+            {
+                _id: req.query.userID
+            },
+            {
+                lastName: lastName,
+                firstName: firstName,
+                about: about,
+                imageURL: imageURL
+            },
+            {
+                new: true
+            });
 
         res.send(user);
 

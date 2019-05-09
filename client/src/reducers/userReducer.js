@@ -2,6 +2,8 @@ import { LOGIN_SUCCESS } from '../actions/userActions';
 import { LOGIN_FAILED } from '../actions/userActions';
 import { REG_SUCCESS } from '../actions/userActions';
 import { REG_FAILED } from '../actions/userActions';
+import { EDIT_SUCCESS } from '../actions/userActions';
+import { EDIT_FAILED } from '../actions/userActions';
 import { LOGOUT } from '../actions/userActions';
 import { REFRESH } from '../actions/userActions';
 
@@ -67,6 +69,22 @@ export function userReducer(state = initialState, action) {
             return {
                 ...state,
                 isLogin: false,
+                error: action.payload
+            };
+
+        case EDIT_SUCCESS:
+            return {
+                ...state,
+                lastName: action.payload.lastName,
+                firstName: action.payload.firstName,
+                about: action.payload.about,
+                imageURL: action.payload.imageURL,
+                error: ''
+            };
+
+        case EDIT_FAILED:
+            return {
+                ...state,
                 error: action.payload
             };
 

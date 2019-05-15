@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import { getdate } from '../utils/getdate';
 import history from '../history';
 
@@ -48,7 +46,8 @@ class Profile extends React.Component {
             firstName: user.firstName,
             about: user.about,
             imageURL: user.imageURL,
-            isEdit: false});
+            isEdit: false
+        });
         this.props.refresh();
     };
 
@@ -56,7 +55,7 @@ class Profile extends React.Component {
         const { user } = this.props;
 
         return (
-            <div id="profile">
+            <div id="profile" className="container">
                 <div className="profile_header">
                     <h2>{`${user.lastName} ${user.firstName}`}</h2>
                 </div>
@@ -67,10 +66,18 @@ class Profile extends React.Component {
 
                     </div>
                     <div className="profile_personal-info">
-                        <p><b>Фамилия:</b> {user.lastName}</p>
-                        <p><b>Имя:</b> {user.firstName}</p>
-                        <p><b>Дата регистрации:</b> {getdate(user.regDate)}</p>
-                        <p><b>Статус:</b> {user.isAdmin ? 'Админ' : 'Читатель'}</p>
+                        <div>
+                            <b>Фамилия:</b> {user.lastName}
+                        </div>
+                        <div>
+                            <b>Имя:</b> {user.firstName}
+                        </div>
+                        <div>
+                            <b>Дата регистрации:</b> {getdate(user.regDate)}
+                        </div>
+                        <div>
+                            <b>Статус:</b> {user.isAdmin ? 'Админ' : 'Читатель'}
+                        </div>
                         <div className="profile_about">
                             <p><b>О себе:</b></p>
                             <p className="about_text">{user.about}</p>
@@ -85,7 +92,7 @@ class Profile extends React.Component {
         const { user } = this.props;
 
         return (
-            <div id="profile">
+            <div id="profile" className="container">
                 <div className="profile_header">
                     <h2>{`${user.lastName} ${user.firstName}`}</h2>
                 </div>
@@ -94,11 +101,12 @@ class Profile extends React.Component {
                         <div>
                             <img src={user.imageURL} alt=""/>
                             <input
-                                className={ user.error.invalidLastName ? "error photo-link" : "photo-link" }
+                                className={ user.error.invalidImageURL ? "error photo-link" : "photo-link" }
                                 type="text"
                                 name="imageURL"
                                 value={this.state.imageURL}
                                 onChange={this.handleChange}
+                                autoComplete="off"
                             />
                             <span className="error">{ user.error.invalidImageURL }</span>
                         </div>
@@ -108,7 +116,7 @@ class Profile extends React.Component {
                         </div>
                     </div>
                     <div className="profile_personal-info">
-                        <p>
+                        <div>
                             <b>Фамилия: </b>
                             <input
                                 className={ user.error.invalidLastName ? "error" : null }
@@ -116,21 +124,33 @@ class Profile extends React.Component {
                                 name="lastName"
                                 value={this.state.lastName}
                                 onChange={this.handleChange}
+                                autoComplete="off"
                             />
-                            <span className="error">{ user.error.invalidLastName }</span>
-                        </p>
-                        <p>
+                            <span className="error" style={{paddingLeft: "126px"}}>{ user.error.invalidLastName }</span>
+                        </div>
+                        <div>
                             <b>Имя: </b>
-                            <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange}/>
-                        </p>
-                        <p>
+                            <input
+                                className={ user.error.invalidFirstName ? "error" : null }
+                                type="text"
+                                name="firstName"
+                                value={this.state.firstName}
+                                onChange={this.handleChange}
+                                autoComplete="off"
+                                style={{width: "353px"}}
+                            />
+                            <span className="error" style={{paddingLeft: "63px"}}>{ user.error.invalidFirstName }</span>
+                        </div>
+                        <div>
                             <b>Дата регистрации:</b> {getdate(user.regDate)}
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <b>Статус:</b> {user.isAdmin ? 'Админ' : 'Читатель'}
-                        </p>
+                        </div>
                         <div className="profile_about">
-                            <p><b>О себе:</b></p>
+                            <div>
+                                <b>О себе:</b>
+                            </div>
                             <textarea name="about" value={this.state.about} onChange={this.handleChange}></textarea>
                         </div>
                     </div>

@@ -5,7 +5,7 @@ import { REG_FAILED } from '../actions/userActions';
 import { EDIT_SUCCESS } from '../actions/userActions';
 import { EDIT_FAILED } from '../actions/userActions';
 import { LOGOUT } from '../actions/userActions';
-import { REFRESH } from '../actions/userActions';
+import { REFRESH_USER } from '../actions/userActions';
 
 const initialState = {
     firstName: '',
@@ -88,7 +88,7 @@ export function userReducer(state = initialState, action) {
                 error: action.payload
             };
 
-        case REFRESH:
+        case REFRESH_USER:
             return {
                 ...state,
                 error: ''

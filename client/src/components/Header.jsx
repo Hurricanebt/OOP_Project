@@ -15,6 +15,7 @@ class Header extends React.Component {
             <div className="header_button" onClick={this.props.logout}>
                 <Link to={'/login'}>Выйти</Link>
             </div>
+            
         )
     };
 

@@ -31,7 +31,7 @@ class Login extends React.Component {
         const error = this.props.error;
 
         return (
-            <div id="login-form">
+            <div id="login-form" className="container">
                 <div className="login-form_header">
                     <h2>Вход в систему</h2>
                 </div>
@@ -61,6 +61,7 @@ class Login extends React.Component {
                 </div>
                 <div className="login-form_errors">
                     { error.userNotFound }
+                    
                 </div>
             </div>
         );

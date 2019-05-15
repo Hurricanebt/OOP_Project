@@ -34,7 +34,7 @@ class Registration extends React.Component {
         const error = this.props.error;
 
         return (
-            <div id="reg-form">
+            <div id="reg-form" className="container">
                 <div className="reg-form_header">
                     <h2>Регистрация в системе</h2>
                 </div>

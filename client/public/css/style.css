@@ -1,14 +1,17 @@
 #root {
-    margin: 0 auto;
-    max-width: 1200px;
     font-family: sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
 }
 
 #header {
     display: flex;
     justify-content: space-between;
     background: #005db6;
-    box-shadow: 0 0 10px rgb(204, 201, 201);
+    /*box-shadow: 0 0 10px rgb(204, 201, 201);*/
 }
 
 .header_nav-menu ul {
@@ -57,7 +60,7 @@
     flex-wrap: wrap;
 }
 
-.login-form_inputs input, .reg-form_inputs input {
+.login-form_inputs input, .reg-form_inputs input, .news-form_inputs input {
     display: block;
     border: none;
     border-bottom: 1px solid #888888;
@@ -85,7 +88,7 @@ span.error {
     margin-top: 0;
 }
 
-.login-form_inputs input:focus, .reg-form_inputs input:focus {
+.login-form_inputs input:focus, .reg-form_inputs input:focus, .news-form_inputs input:focus {
     border-bottom: 1px solid #005db6;
 }
 
@@ -100,6 +103,10 @@ span.error {
 
 .login-form_inputs .login-form_button:hover, .reg-form_inputs .reg-form_button:hover {
     background-color: #004a92;
+}
+
+.login-form_inputs .login-form_button:focus, .reg-form_inputs .reg-form_button:focus {
+    border: none;
 }
 
 .login-form_inputs a, .reg-form_inputs a {
@@ -119,8 +126,9 @@ span.error {
 
 #profile {
     margin-top: 100px;
-    box-shadow: 0 0 10px rgb(204, 201, 201);
+    /*box-shadow: 0 0 10px rgb(204, 201, 201);*/
     padding: 25px;
+    border: 1px solid #005db6;
 }
 
 #profile h2 {
@@ -136,22 +144,24 @@ span.error {
     width: 100%;
 }
 
-.profile_personal-info p {
-    margin-top: 10px;
+.profile_personal-info div {
+    margin-top: 5px;
     font-size: 24px;
-    height: 28px;
+    min-height: 32px;
+    display: block;
 }
 
-.profile_personal-info p:first-child {
+.profile_personal-info div:first-child {
     margin-top: 0;
 }
 
 .profile_about {
-    margin-top: 60px;
+    margin-top: 40px !important;
 }
 
 p.about_text {
     font-size: 20px;
+    margin-top: 10px;
 }
 
 .profile_personal-info b {
@@ -239,4 +249,143 @@ p.about_text {
 
 #profile input.error {
     border-bottom: 1px solid #ff0000;
+}
+
+#news-list {
+}
+
+#news-list .news {
+    width: 100%;
+    height: 300px;
+    margin: 50px 0;
+    padding: 30px;
+    border: 1px solid #005db6;
+    /*box-shadow: 0 0 10px rgb(204, 201, 201);*/
+}
+
+.news_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.news a {
+    font-size: 32px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.news a:hover {
+    color: #005db6;
+}
+
+.news_date {
+    font-size: 20px;
+}
+
+.news p {
+    color: #888888;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.news-form_inputs {
+    margin: 50px 0;
+    padding: 30px;
+    border: 1px solid #005db6;
+    /*height: 400px;*/
+}
+
+.news-form_inputs input {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+#news-list textarea {
+    margin-top: 20px;
+    resize: none;
+    width: 100%;
+    height: 160px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #888888;
+    border: 1px solid #888888;
+    outline: none;
+}
+
+#news-list textarea.error {
+    border: 1px solid #ff0000;
+}
+
+input.news-form_button {
+    margin: 20px auto 0 auto;
+    max-width: 30%;
+    border: none;
+    background-color: #005db6;
+    color: #ffffff;
+    padding: 15px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+}
+
+input.news-form_button:focus {
+    border: none;
+}
+
+input.news-form_button:hover {
+    background-color: #004a92;
+}
+
+#news-list textarea:focus {
+    border: 1px solid #005db6;
+}
+
+.news_title {
+    display: flex;
+    align-items: center;
+}
+
+.news_title i {
+    font-size: 22px;
+    margin-left: 15px;
+    margin-top: 2px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.news_title i:hover {
+    color: #ff0000;
+}
+
+#news {
+    margin-top: 50px;
+}
+
+#news .news_date {
+    font-size: 24px;
+}
+
+#news h2 {
+    font-size: 48px;
+}
+
+#news p {
+    color: #888888;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: justify;
+}
+
+p.author {
+    margin-top: 20px;
+    font-style: italic;
+    color: #000000 !important;
 }

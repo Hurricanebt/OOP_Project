@@ -8,7 +8,7 @@ export const REG_FAILED = 'REG_FAILED';
 export const EDIT_SUCCESS = 'EDIT_SUCCESS';
 export const EDIT_FAILED = 'EDIT_FAILED';
 export const LOGOUT = 'LOGOUT';
-export const REFRESH = 'REFRESH';
+export const REFRESH_USER = 'REFRESH_USER';
 
 export function login(email, password) {
     return dispatch => {
@@ -106,7 +106,7 @@ export function logout() {
 export function refresh() {
     return dispatch => {
         dispatch({
-            type: REFRESH
+            type: REFRESH_USER
         })
     }
 }

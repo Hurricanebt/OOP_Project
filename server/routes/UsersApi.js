@@ -6,6 +6,12 @@ const editValidation = require('../utils/editValidation');
 
 const router = express.Router();
 
+router.get('/getuserbyid', async (req, res) => {
+    const { id } = req.query;
+    const user = await Users.findOne({_id: id});
+    res.send(user);
+});
+
 router.post('/registration', async (req, res) => {
     try {
         const { firstName, lastName, imageURL, isAdmin, email, password } = req.body;
@@ -50,8 +56,6 @@ router.get('/login', async (req, res) => {
 router.post('/edit', async (req, res) => {
     try {
         const { lastName, firstName, about, imageURL } = req.body;
-
-        console.log(imageURL.length);
 
         const errors = editValidation(lastName, firstName, imageURL);
         if (errors.isValidationError) throw errors;

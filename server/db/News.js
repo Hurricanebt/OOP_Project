@@ -7,7 +7,8 @@ const newsSchema = new mongoose.Schema({
     publicationTime: { type: Date, default: Date.now },
     comments: [{
         text: String,
-        userID: String
+        userID: String,
+        publicationTime: { type: Date, default: Date.now }
     }]
 });
 

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "fast-deep-equal": "^2.0.1",
+    "fetch-mock": "^7.3.3",
     "logger": "0.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -35,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "redux-mock-store": "^1.5.3"
   }
 }

@@ -1,13 +1,6 @@
-import { LOGIN_SUCCESS } from '../actions/userActions';
-import { LOGIN_FAILED } from '../actions/userActions';
-import { REG_SUCCESS } from '../actions/userActions';
-import { REG_FAILED } from '../actions/userActions';
-import { EDIT_SUCCESS } from '../actions/userActions';
-import { EDIT_FAILED } from '../actions/userActions';
-import { LOGOUT } from '../actions/userActions';
-import { REFRESH_USER } from '../actions/userActions';
+import * as t from '../actionTypes/userActionsTypes';
 
-const initialState = {
+export const initialState = {
     firstName: '',
     lastName: '',
     isAdmin: false,
@@ -21,7 +14,7 @@ const initialState = {
 
 export function userReducer(state = initialState, action) {
     switch (action.type) {
-        case LOGIN_SUCCESS:
+        case t.LOGIN_SUCCESS:
             return {
                 firstName: action.payload.firstName,
                 lastName: action.payload.lastName,
@@ -34,25 +27,17 @@ export function userReducer(state = initialState, action) {
                 error: ''
             };
 
-        case LOGIN_FAILED:
+        case t.LOGIN_FAILED:
             return {
                 ...state,
                 isLogin: false,
                 error: action.payload
             };
 
-        case LOGOUT:
-            return {
-                firstName: '',
-                lastName: '',
-                isAdmin: false,
-                isLogin: false,
-                regDate: undefined,
-                imageURL: undefined,
-                error: ''
-            };
+        case t.LOGOUT:
+            return { ...initialState };
 
-        case REG_SUCCESS:
+        case t.REG_SUCCESS:
             return {
                 firstName: action.payload.firstName,
                 lastName: action.payload.lastName,
@@ -65,14 +50,14 @@ export function userReducer(state = initialState, action) {
                 error: ''
             };
 
-        case REG_FAILED:
+        case t.REG_FAILED:
             return {
                 ...state,
                 isLogin: false,
                 error: action.payload
             };
 
-        case EDIT_SUCCESS:
+        case t.EDIT_SUCCESS:
             return {
                 ...state,
                 lastName: action.payload.lastName,
@@ -82,13 +67,13 @@ export function userReducer(state = initialState, action) {
                 error: ''
             };
 
-        case EDIT_FAILED:
+        case t.EDIT_FAILED:
             return {
                 ...state,
                 error: action.payload
             };
 
-        case REFRESH_USER:
+        case t.REFRESH_USER:
             return {
                 ...state,
                 error: ''

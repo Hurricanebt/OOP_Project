@@ -1,10 +1,6 @@
 import {encodeBody} from "../utils/encode";
 
-export const GET_NEWS = 'GET_NEWS';
-export const CREATE_NEWS_SUCCESS = 'CREATE_NEWS_SUCCESS';
-export const CREATE_NEWS_FAILED = 'CREATE_NEWS_FAILED';
-export const DELETE_NEWS = 'DELETE_NEWS';
-export const REFRESH_NEWS = 'REFRESH_NEWS';
+import * as t from '../actionTypes/newsActionsTypes'
 
 export function getNews() {
     return dispatch => {
@@ -12,7 +8,7 @@ export function getNews() {
             .then(data => data.json())
             .then(data => {
                 dispatch({
-                    type: GET_NEWS,
+                    type: t.GET_NEWS,
                     payload: data.reverse()
                 });
             })
@@ -35,13 +31,13 @@ export function createNews(title, text, authorID) {
         .then(data => {
             if (data.isValidationError) throw data;
             dispatch({
-                type: CREATE_NEWS_SUCCESS,
+                type: t.CREATE_NEWS_SUCCESS,
                 payload: data.reverse()
             });
         })
         .catch(error => {
             dispatch({
-                type: CREATE_NEWS_FAILED,
+                type: t.CREATE_NEWS_FAILED,
                 payload: error
             });
         })
@@ -60,7 +56,7 @@ export function deleteNews(newsID) {
         .then(data => data.json())
         .then(data => {
             dispatch({
-                type: DELETE_NEWS,
+                type: t.DELETE_NEWS,
                 payload: data.reverse()
             });
         })
@@ -70,7 +66,7 @@ export function deleteNews(newsID) {
 export function refresh() {
     return dispatch => {
         dispatch({
-            type: REFRESH_NEWS
+            type: t.REFRESH_NEWS
         })
     }
 }

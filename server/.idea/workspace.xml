@@ -2,32 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d78c132-0da5-412c-a2ff-dd9fc9b44ca4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/actions/newsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/actions/newsActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/actions/userActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/NewsList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/Profile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/Registration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/containers/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/containers/HeaderContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/containers/HomeContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/containers/LoginContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/containers/NewsListContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/containers/ProfileContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/containers/RegistrationsContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/reducers/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/reducers/newsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/News.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/containers/NewsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/containers/NewsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/reducers/newsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/reducers/newsReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/reducers/userReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/News.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/NewsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/NewsApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/UsersApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/UsersApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/editValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/editValidation.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/NewsApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            <state relative-caret-position="510">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
             </state>
           </provider>
         </entry>
@@ -58,47 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/UsersApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/editValidation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-end-line="12" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/regValidation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -106,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/News.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="170">
+              <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -153,10 +103,10 @@
         <option value="$PROJECT_DIR$/utils/regValidation.js" />
         <option value="$PROJECT_DIR$/db/Users.js" />
         <option value="$PROJECT_DIR$/utils/editValidation.js" />
-        <option value="$PROJECT_DIR$/db/News.js" />
         <option value="$PROJECT_DIR$/utils/createNewsValidation.js" />
-        <option value="$PROJECT_DIR$/routes/NewsApi.js" />
         <option value="$PROJECT_DIR$/routes/UsersApi.js" />
+        <option value="$PROJECT_DIR$/db/News.js" />
+        <option value="$PROJECT_DIR$/routes/NewsApi.js" />
       </list>
     </option>
   </component>
@@ -171,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +147,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,12 +246,18 @@
       <workItem from="1557826340654" duration="3007000" />
       <workItem from="1557847025022" duration="8805000" />
       <workItem from="1557870936618" duration="2404000" />
-      <workItem from="1557920880082" duration="604000" />
+      <workItem from="1557920880082" duration="935000" />
+      <workItem from="1557923926543" duration="27000" />
+      <workItem from="1557952080913" duration="683000" />
+      <workItem from="1557957453290" duration="610000" />
+      <workItem from="1557994917231" duration="598000" />
+      <workItem from="1558016596815" duration="7583000" />
+      <workItem from="1558045570749" duration="556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112176000" />
+    <option name="totallyTimeSpent" value="122564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
@@ -383,27 +339,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/NewsApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/createNewsValidation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/editValidation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/regValidation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -425,10 +360,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/editValidation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/NewsApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/createNewsValidation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/UsersApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/News.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="170">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -443,13 +406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="78" selection-start-line="8" selection-start-column="78" selection-end-line="8" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/UsersApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>

@@ -1,8 +1,4 @@
-import { GET_NEWS } from '../actions/newsActions';
-import { CREATE_NEWS_SUCCESS } from '../actions/newsActions';
-import { CREATE_NEWS_FAILED } from '../actions/newsActions';
-import { DELETE_NEWS } from '../actions/newsActions';
-import { REFRESH_NEWS } from '../actions/newsActions';
+import * as t from '../actionTypes/newsActionsTypes'
 
 const initialState = {
     news: [],
@@ -11,21 +7,21 @@ const initialState = {
 
 export function newsReducer(state = initialState, action) {
     switch (action.type) {
-        case GET_NEWS:
-        case CREATE_NEWS_SUCCESS:
-        case DELETE_NEWS:
+        case t.GET_NEWS:
+        case t.CREATE_NEWS_SUCCESS:
+        case t.DELETE_NEWS:
             return {
                 news: action.payload,
                 error: ''
             }
 
-        case CREATE_NEWS_FAILED:
+        case t.CREATE_NEWS_FAILED:
             return {
                 ...state,
                 error: action.payload
             };
 
-        case REFRESH_NEWS:
+        case t.REFRESH_NEWS:
             return {
                 ...state,
                 error: ''

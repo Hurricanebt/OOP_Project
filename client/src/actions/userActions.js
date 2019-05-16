@@ -1,18 +1,11 @@
 import { encodeBody } from '../utils/encode';
 import history from '../history';
 
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
-export const LOGIN_FAILED = 'LOGIN_FAILED';
-export const REG_SUCCESS = 'REG_SUCCESS';
-export const REG_FAILED = 'REG_FAILED';
-export const EDIT_SUCCESS = 'EDIT_SUCCESS';
-export const EDIT_FAILED = 'EDIT_FAILED';
-export const LOGOUT = 'LOGOUT';
-export const REFRESH_USER = 'REFRESH_USER';
+import * as t from '../actionTypes/userActionsTypes';
 
 export function login(email, password) {
     return dispatch => {
-        fetch(`http://localhost:4000/api/login?email=${email}&password=${password}`, {
+        return fetch(`http://localhost:4000/api/login?email=${email}&password=${password}`, {
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             method: 'GET'
         })
@@ -20,14 +13,15 @@ export function login(email, password) {
         .then(data => {
             if (data.isValidationError) throw data;
             dispatch({
-                type: LOGIN_SUCCESS,
+                type: t.LOGIN_SUCCESS,
                 payload: data
             });
             history.push('/profile');
+            return data;
         })
         .catch(error => {
             dispatch({
-                type: LOGIN_FAILED,
+                type: t.LOGIN_FAILED,
                 payload: error
             });
         })
@@ -36,7 +30,7 @@ export function login(email, password) {
 
 export function registration(lastName, firstName, email, password, imageURL) {
     return dispatch => {
-        fetch('http://localhost:4000/api/registration',{
+        return fetch('http://localhost:4000/api/registration',{
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             method: "POST",
             body: encodeBody({
@@ -52,14 +46,14 @@ export function registration(lastName, firstName, email, password, imageURL) {
         .then(data => {
             if (data.isValidationError) throw data;
             dispatch({
-                type: REG_SUCCESS,
+                type: t.REG_SUCCESS,
                 payload: data
             });
             history.push('/profile');
         })
         .catch((error) => {
             dispatch({
-                type: REG_FAILED,
+                type: t.REG_FAILED,
                 payload: error
             })
         })
@@ -68,7 +62,7 @@ export function registration(lastName, firstName, email, password, imageURL) {
 
 export function editProfile(lastName, firstName, about, imageURL, userID) {
     return dispatch => {
-        fetch(`http://localhost:4000/api/edit?userID=${userID}`, {
+        return fetch(`http://localhost:4000/api/edit?userID=${userID}`, {
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             method: 'POST',
             body: encodeBody({
@@ -82,13 +76,13 @@ export function editProfile(lastName, firstName, about, imageURL, userID) {
         .then(data => {
             if (data.isValidationError) throw data;
             dispatch({
-                type: EDIT_SUCCESS,
+                type: t.EDIT_SUCCESS,
                 payload: data
             });
         })
         .catch((error) => {
             dispatch({
-                type: EDIT_FAILED,
+                type: t.EDIT_FAILED,
                 payload: error
             })
         })
@@ -97,16 +91,16 @@ export function editProfile(lastName, firstName, about, imageURL, userID) {
 
 export function logout() {
     return dispatch => {
-        dispatch({
-            type: LOGOUT
+        return dispatch({
+            type: t.LOGOUT
         });
     }
 }
 
 export function refresh() {
     return dispatch => {
-        dispatch({
-            type: REFRESH_USER
+        return dispatch({
+            type: t.REFRESH_USER
         })
     }
 }

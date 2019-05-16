@@ -127,7 +127,7 @@ span.error {
 #profile {
     margin-top: 100px;
     /*box-shadow: 0 0 10px rgb(204, 201, 201);*/
-    padding: 25px;
+    padding: 30px;
     border: 1px solid #005db6;
 }
 
@@ -388,4 +388,75 @@ p.author {
     margin-top: 20px;
     font-style: italic;
     color: #000000 !important;
+}
+
+.add-comment-form {
+    display: flex;
+    align-items: center;
+    margin: 60px 0;
+    padding: 30px;
+    border: 1px solid #005db6;
+}
+
+.add-comment-form input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #888888;
+    font-size: 20px;
+    color: #888888;
+    width: 100%;
+    outline: none;
+    padding-bottom: 4px;
+}
+
+.add-comment-form input:focus {
+    border-bottom: 1px solid #005db6;
+}
+
+.fa-caret-square-right {
+    font-size: 26px;
+    margin-left: 20px;
+    color: #005db6;
+    cursor: pointer;
+}
+
+.fa-caret-square-right:hover {
+    color: #004a92;
+}
+
+.comment {
+    padding: 30px;
+    border: 1px solid #005db6;
+    margin: 30px 0;
+}
+
+.comment_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment_header h3 {
+    font-size: 24px;
+}
+
+.comment_author {
+    display: flex;
+}
+
+.comment_author i {
+    font-size: 22px;
+    margin-left: 15px;
+    margin-top: 2px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.comment_author i:hover {
+    color: #ff0000;
+}
+
+.comment_date {
+    font-size: 20px;
 }

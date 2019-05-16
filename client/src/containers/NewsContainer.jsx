@@ -6,9 +6,15 @@ import News from '../components/News';
 class NewsContainer extends React.Component {
     render() {
         return (
-            <News id={ this.props.match.params.id }/>
+            <News id={ this.props.match.params.id } user={ this.props.user }/>
         )
     }
 }
 
-export default connect(null, null)(NewsContainer);
+const mapStateToPtops = store => {
+    return {
+        user: store.user
+    }
+};
+
+export default connect(mapStateToPtops, null)(NewsContainer);

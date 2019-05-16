@@ -1,5 +1,6 @@
 const express = require('express');
 const News = require('../db/News');
+const Users = require('../db/Users');
 const createNewsValidation = require('../utils/createNewsValidation');
 
 const router = express.Router();
@@ -43,6 +44,54 @@ router.post('/deletenews', async (req, res) => {
 
     await News.find({})
         .then((news) => res.send(news));
+});
+
+router.post('/addcomment', async (req, res) => {
+    const news = await News.findOne({_id: req.body.newsID});
+
+    const comments = news.comments;
+    comments.push({
+        text: req.body.text,
+        userID: req.body.userID
+    });
+
+    await News.findOneAndUpdate(
+        {
+            _id: req.body.newsID
+        },
+        {
+            comments: comments
+        },
+        {
+            new: true
+        });
+
+    res.send(comments);
+});
+
+router.post('/deletecomment', async (req, res) => {
+    const news = await News.findOne({_id: req.body.newsID});
+
+    const comments = news.comments;
+
+    for (let i = 0; i < comments.length; i++) {
+        if (comments[i]._id + '' === req.body.commentID) {
+            comments.splice(i, 1);
+        }
+    }
+
+    await News.findOneAndUpdate(
+        {
+            _id: req.body.newsID
+        },
+        {
+            comments: comments
+        },
+        {
+            new: true
+        });
+
+    res.send(comments);
 });
 
 module.exports = router;

@@ -390,6 +390,17 @@ p.author {
     color: #000000 !important;
 }
 
+#news p.author a {
+    margin-top: 20px;
+    font-style: italic;
+    color: #000000 !important;
+    text-decoration: none;
+}
+
+#news p.author a:hover {
+    color: #005db6 !important;
+}
+
 .add-comment-form {
     display: flex;
     align-items: center;
@@ -437,8 +448,14 @@ p.author {
     margin-bottom: 10px;
 }
 
-.comment_header h3 {
+.comment_header a {
     font-size: 24px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.comment_header a:hover {
+    color: #005db6;
 }
 
 .comment_author {

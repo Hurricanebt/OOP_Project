@@ -1,23 +1,19 @@
 import React from 'react';
 
 import { getdate } from '../utils/getdate';
-import { encodeBody } from "../utils/encode";
+
+import { Link } from "react-router-dom";
 
 class News extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: '',
-            date: '',
-            text: '',
-            author: '',
-            comments: [],
             commentText: ''
         }
     }
 
     componentWillMount() {
-        this.getNewsByID();
+        this.props.getNewsByID(this.props.id);
     };
 
     handleChange = e => {
@@ -26,77 +22,13 @@ class News extends React.Component {
         });
     };
 
-    getNewsByID = () => {
-        fetch(`http://localhost:4000/api/getnewsbyid?id=${this.props.id}`, {
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            method: 'GET'
-            })
-            .then(data => data.json())
-            .then(async (data) => {
-                this.setState({
-                    title: data.title,
-                    date: data.publicationTime,
-                    text: data.text,
-                    author: await this.getUserName(data.authorID),
-                    comments: await this.getComments(data.comments)
-                });
-            });
-    };
-        
-    getUserName = async (userID) => {
-        return await fetch(`http://localhost:4000/api/getuserbyid?id=${userID}`, {
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            method: 'GET'
-            })
-            .then(data => data.json())
-            .then(data => data.lastName + ' ' + data.firstName);
-    };
-
     handleAddComment = () => {
-        fetch('http://localhost:4000/api/addcomment',{
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            method: "POST",
-            body: encodeBody({
-                "userID": this.props.user.userID,
-                "newsID": this.props.id,
-                "text": this.state.commentText
-            })
-        })
-        .then(data => data.json())
-        .then(async data => {
-            this.setState({
-                comments: await this.getComments(data),
-                commentText: ''
-            });
-        });
+        this.props.addComment(this.props.user.userID, this.props.id, this.state.commentText);
+        this.setState({commentText: ''});
     };
-    handleDeleteCommentButton = (e) => {
-        fetch('http://localhost:4000/api/deletecomment',{
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            method: "POST",
-            body: encodeBody({
-                "newsID": this.props.id,
-                "commentID": e.target.getAttribute('name'),
-            })
-        })
-        .then(data => data.json())
-        .then(async data => {
-            this.setState({
-                comments: await this.getComments(data),
-                commentText: ''
-            });
-        });
-    }
 
-    getComments = async (comments) => {
-        const result = comments.map(async item => {
-            const userName = await this.getUserName(item.userID);
-            return {
-                ...item,
-                userName
-            }
-        })
-        return Promise.all(result);
+    handleDeleteCommentButton = (e) => {
+        this.props.deleteComment(this.props.id, e.target.getAttribute('name'));
     };
 
     renderCommentsForm = () => {
@@ -112,11 +44,15 @@ class News extends React.Component {
     };
 
     renderComments = () => {
-        const comments = this.state.comments.map(item => (
+        const comments = this.props.news.comments.map(item => (
             <div className="comment" key={item._id}>
                 <div className="comment_header">
                     <div className="comment_author">
-                        <h3>{ item.userName }</h3>
+                        <h3>
+                            <Link to={item.userID === this.props.user.userID ? '/profile' : `/user${item.userID}`}>
+                                { item.userName }
+                            </Link>
+                        </h3>
                         { (item.userID === this.props.user.userID) || this.props.user.isAdmin ? <i name={item._id} onClick={this.handleDeleteCommentButton} className="fas fa-trash-alt"></i> : null }
                     </div>
                     <div className="comment_date">
@@ -131,19 +67,23 @@ class News extends React.Component {
     }
 
     render() {
+        const news = this.props.news;
+        console.log(news);
         return (
             <div id="news" className="container">
                 <div className="main-content">
                     <div className="news_header">
                         <div className="news_title">
-                            <h2>{ this.state.title }</h2>
+                            <h2>{ news.title }</h2>
                         </div>
                         <div className="news_date">
-                            { getdate(this.state.date) }
+                            { getdate(news.date) }
                         </div>
                     </div>
-                    <p>{ this.state.text }</p>
-                    <p className="author">Автор: { this.state.author }</p>
+                    <p>{ news.text }</p>
+                    <p className="author">
+                        Автор: <Link to={news.authorID === this.props.user.userID ? '/profile' : `/user${news.authorID}`}>{ news.author }</Link>
+                    </p>
                 </div>
                 <div className="comments">
                     { this.renderCommentsForm() }

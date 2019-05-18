@@ -1,32 +1,32 @@
 import * as t from '../actionTypes/newsActionsTypes'
 
 const initialState = {
-    news: [],
-    error: ''
+    title: '',
+    date: '',
+    text: '',
+    author: '',
+    authorID: '',
+    comments: []
 };
 
 export function newsReducer(state = initialState, action) {
     switch (action.type) {
-        case t.GET_NEWS:
-        case t.CREATE_NEWS_SUCCESS:
-        case t.DELETE_NEWS:
+        case t.GET_NEWS_BY_ID:
             return {
-                news: action.payload,
-                error: ''
-            }
-
-        case t.CREATE_NEWS_FAILED:
-            return {
-                ...state,
-                error: action.payload
+                title: action.payload.title,
+                date: action.payload.date,
+                text: action.payload.text,
+                author: action.payload.author,
+                authorID: action.payload.authorID,
+                comments: action.payload.comments
             };
 
-        case t.REFRESH_NEWS:
+        case t.CREATE_COMMENT:
+        case t.DELETE_COMMENT:
             return {
                 ...state,
-                error: ''
+                comments: action.payload.comments
             };
-
         default:
             return state
     }

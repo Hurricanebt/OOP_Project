@@ -15,7 +15,7 @@ class NewsList extends React.Component {
     componentWillMount() {
         this.props.refresh();
         this.props.getNews();
-        this.setState({news: this.props.news.news});
+        this.setState({news: this.props.newsList.news});
     }
 
     handleChange = e => {
@@ -36,7 +36,7 @@ class NewsList extends React.Component {
     };
 
     renderAddNewsForm = () => {
-        const error = this.props.news.error;
+        const error = this.props.newsList.error;
         return (
             <div className="news-form_inputs">
                 <form autoComplete= "off">
@@ -67,7 +67,7 @@ class NewsList extends React.Component {
     };
 
     render() {
-        const news = this.props.news.news.map(item => (
+        const news = this.props.newsList.news.map(item => (
             <div className="news" key={item._id}>
                 <div className="news_header">
                     <div className="news_title">

@@ -1,5 +1,3 @@
-export const GET_NEWS = 'GET_NEWS';
-export const CREATE_NEWS_SUCCESS = 'CREATE_NEWS_SUCCESS';
-export const CREATE_NEWS_FAILED = 'CREATE_NEWS_FAILED';
-export const DELETE_NEWS = 'DELETE_NEWS';
-export const REFRESH_NEWS = 'REFRESH_NEWS';
+export const GET_NEWS_BY_ID = 'GET_NEWS_BY_ID';
+export const CREATE_COMMENT = 'CREATE_COMMENT';
+export const DELETE_COMMENT = 'DELETE_COMMENT';

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import history from '../history';
+
 class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -11,6 +13,7 @@ class Login extends React.Component {
     };
 
     componentWillMount() {
+        if (this.props.user.isLogin) history.push('/profile');
         this.props.refresh();
     };
 
@@ -28,7 +31,7 @@ class Login extends React.Component {
     };
 
     render() {
-        const error = this.props.error;
+        const error = this.props.user.error;
 
         return (
             <div id="login-form" className="container">

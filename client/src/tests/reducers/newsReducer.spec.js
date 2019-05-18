@@ -1,6 +1,6 @@
-import { initialState, newsReducer } from '../../reducers/newsReducer';
+import { initialState, newsListReducer } from '../../reducers/newsListReducer';
 
-import * as t from '../../actionTypes/newsActionsTypes';
+import * as t from '../../actionTypes/newsListActionsTypes';
 
 describe('user reducer', () => {
 
@@ -21,7 +21,7 @@ describe('user reducer', () => {
             payload: news
         }
 
-        expect(newsReducer(initialState, action)).toEqual({
+        expect(newsListReducer(initialState, action)).toEqual({
             news: news,
             error: ''
         });
@@ -33,7 +33,7 @@ describe('user reducer', () => {
             payload: news
         }
 
-        expect(newsReducer(initialState, action)).toEqual({
+        expect(newsListReducer(initialState, action)).toEqual({
             news: news,
             error: ''
         });
@@ -45,7 +45,7 @@ describe('user reducer', () => {
             payload: error
         }
 
-        expect(newsReducer(initialStateWithNews, action)).toEqual({
+        expect(newsListReducer(initialStateWithNews, action)).toEqual({
             ...initialStateWithNews,
             error: error
         });
@@ -57,7 +57,7 @@ describe('user reducer', () => {
             payload: news
         }
 
-        expect(newsReducer(initialState, action)).toEqual({
+        expect(newsListReducer(initialState, action)).toEqual({
             news: news,
             error: ''
         });
@@ -69,7 +69,7 @@ describe('user reducer', () => {
             payload: news
         }
 
-        expect(newsReducer(initialStateWithNews, action)).toEqual({
+        expect(newsListReducer(initialStateWithNews, action)).toEqual({
             ...initialStateWithNews,
             error: ''
         });

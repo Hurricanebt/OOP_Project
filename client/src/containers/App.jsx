@@ -10,6 +10,7 @@ import NewsListContainer from './NewsListContainer';
 import ProfileContainer from './ProfileContainer';
 import LoginContainer from './LoginContainer';
 import RegistrationsContainer from './RegistrationsContainer';
+import UserPageContainer from './UserPageContainer';
 
 class App extends React.Component {
 	render() {
@@ -21,6 +22,7 @@ class App extends React.Component {
 					<Route exact path="/news" component={NewsListContainer} />
 					<Route exact path="/news:id" component={NewsContainer} />
 					<Route exact path="/profile" component={ProfileContainer} />
+					<Route exact path="/user:id" component={UserPageContainer} />
 					<Route exact path="/login" component={LoginContainer} />
 					<Route exact path="/registration" component={RegistrationsContainer} />
 				</Switch>

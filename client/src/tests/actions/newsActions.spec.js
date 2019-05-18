@@ -1,4 +1,4 @@
-import * as t from '../../actionTypes/newsActionsTypes';
+import * as t from '../../actionTypes/newsListActionsTypes';
 
 describe('user actions', () => {
 

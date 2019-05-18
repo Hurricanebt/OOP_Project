@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 
 import NewsList from '../components/NewsList';
 
-import { getNews, createNews, deleteNews, refresh } from '../actions/newsActions';
+import { getNews, createNews, deleteNews, refresh } from '../actions/newsListActions';
 
 class NewsListContainer extends React.Component {
     render() {
         return (
             <NewsList 
                 user={this.props.user} 
-                news={this.props.news} 
+                newsList={this.props.newsList}
                 getNews={this.props.getNews} 
                 createNews={this.props.createNews} 
                 deleteNews={this.props.deleteNews}
@@ -23,7 +23,7 @@ class NewsListContainer extends React.Component {
 const mapStateToPtops = store => {
     return {
         user: store.user,
-        news: store.news
+        newsList: store.newsList,
     }
 };
 
@@ -34,6 +34,6 @@ const mapDispatchToProps = dispatch => {
         getNews: () => dispatch(getNews()),
         refresh: () => dispatch(refresh())
     }
-}
+};
 
 export default connect(mapStateToPtops, mapDispatchToProps)(NewsListContainer);

@@ -9,14 +9,14 @@ import { refresh } from '../actions/userActions';
 class RegistrationContainer extends React.Component {
     render() {
         return (
-            <Registration error={this.props.error} registration={this.props.registration} refresh={this.props.refresh} />
+            <Registration user={this.props.user} registration={this.props.registration} refresh={this.props.refresh} />
         )
     }
 }
 
 const mapStateToProps = store => {
     return {
-        error: store.user.error
+        user: store.user
     }
 };
 

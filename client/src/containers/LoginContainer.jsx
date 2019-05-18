@@ -9,14 +9,14 @@ import { refresh } from '../actions/userActions';
 class LoginContainer extends React.Component {
     render() {
         return (
-            <Login error={this.props.error} login={this.props.login} refresh={this.props.refresh} />
+            <Login user={this.props.user} login={this.props.login} refresh={this.props.refresh} />
         )
     }
 }
 
 const mapStateToProps = store => {
     return {
-        error: store.user.error
+        user: store.user
     }
 };
 

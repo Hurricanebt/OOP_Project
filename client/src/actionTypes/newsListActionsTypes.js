@@ -1,0 +1,5 @@
+export const GET_NEWS = 'GET_NEWS';
+export const CREATE_NEWS_SUCCESS = 'CREATE_NEWS_SUCCESS';
+export const CREATE_NEWS_FAILED = 'CREATE_NEWS_FAILED';
+export const DELETE_NEWS = 'DELETE_NEWS';
+export const REFRESH_NEWS = 'REFRESH_NEWS';

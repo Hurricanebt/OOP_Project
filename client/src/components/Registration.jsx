@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
+import history from '../history';
 
 class Registration extends React.Component {
     constructor(props) {
@@ -14,6 +16,7 @@ class Registration extends React.Component {
     };
 
     componentWillMount() {
+        if (this.props.user.isLogin) history.push('/profile');
         this.props.refresh();
     };
 
@@ -31,7 +34,7 @@ class Registration extends React.Component {
     };
 
     render() {
-        const error = this.props.error;
+        const error = this.props.user.error;
 
         return (
             <div id="reg-form" className="container">

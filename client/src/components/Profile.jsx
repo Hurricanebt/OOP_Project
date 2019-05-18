@@ -33,9 +33,8 @@ class Profile extends React.Component {
         const data = this.state;
         const user = this.props.user;
         this.props.editProfile(data.lastName, data.firstName, data.about, data.imageURL, user.userID);
-        if (data.lastName !== '' && data.firstName !== '' && data.imageURL !== '') {
+        if (data.lastName.length > 3 && data.firstName.length > 3 && data.imageURL.length > 3) {
             this.setState({isEdit: false});
-            this.props.refresh();
         }
     };
 

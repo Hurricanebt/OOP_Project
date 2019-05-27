@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d78c132-0da5-412c-a2ff-dd9fc9b44ca4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/actionTypes/newsActionsTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/actionTypes/newsListActionsTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/actions/newsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/actions/newsListActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/News.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/NewsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/NewsList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/containers/NewsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/containers/NewsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/containers/NewsListContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/containers/NewsListContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/reducers/newsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/reducers/newsListReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/tests/actions/newsActions.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/tests/actions/newsActions.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/tests/actions/newsActions.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/tests/actions/userActions.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/tests/actions/userActions.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/tests/reducers/newsReducer.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/tests/reducers/newsReducer.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,13 +22,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/NewsApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="1343">
+              <caret line="79" column="9" lean-forward="true" selection-end-line="96" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/createNewsValidation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -45,10 +38,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/editValidation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-end-line="12" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/UsersApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="37" />
+            <state relative-caret-position="292">
+              <caret line="72" column="13" lean-forward="true" selection-end-line="83" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -56,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/News.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="119">
+              <caret line="7" column="16" lean-forward="true" selection-end-line="14" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -65,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/Users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="102">
+              <caret line="6" column="43" lean-forward="true" selection-end-line="16" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -76,6 +78,33 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="78" selection-start-line="8" selection-start-column="78" selection-end-line="8" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/regValidation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="36" lean-forward="true" selection-end-line="4" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -111,7 +140,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -121,7 +150,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,6 +176,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,17 +284,18 @@
       <workItem from="1558045570749" duration="556000" />
       <workItem from="1558046518570" duration="599000" />
       <workItem from="1558075689930" duration="1281000" />
+      <workItem from="1558214459412" duration="1840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124444000" />
+    <option name="totallyTimeSpent" value="126284000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2724359" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2724359" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -279,7 +309,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29321662" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29321662" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -342,24 +372,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/regValidation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/index.js">
+    <entry file="file://$PROJECT_DIR$/utils/createNewsValidation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -370,20 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/NewsApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/UsersApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/loginValidation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -391,24 +393,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/Users.js">
+    <entry file="file://$PROJECT_DIR$/utils/regValidation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="36" lean-forward="true" selection-end-line="4" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/News.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="119">
+          <caret line="7" column="16" lean-forward="true" selection-end-line="14" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/createNewsValidation.js">
+    <entry file="file://$PROJECT_DIR$/db/Users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+        <state relative-caret-position="102">
+          <caret line="6" column="43" lean-forward="true" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/NewsApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="9" lean-forward="true" selection-end-line="96" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/UsersApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="72" column="13" lean-forward="true" selection-end-line="83" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
     </entry>

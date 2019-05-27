@@ -124,6 +124,14 @@ span.error {
     text-align: center;
 }
 
+#home p {
+    margin-top: 50px;
+    color: #888888;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: justify;
+}
+
 #profile {
     margin-top: 100px;
     /*box-shadow: 0 0 10px rgb(204, 201, 201);*/
